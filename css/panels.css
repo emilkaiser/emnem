@@ -1,0 +1,141 @@
+body, html {
+  height: 100%
+}
+
+.panel,
+.custom-panels,
+.custom-panel {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.custom-panels {
+  overflow: hidden;
+}
+
+.custom-panel {
+  position: absolute;
+}
+
+.parallax {
+  height: 100vh;
+  overflow: hidden;
+}
+.parallax > * {
+  height: 150%;
+  position: relative;
+  top: -100%;
+}
+
+/*@media only screen and (max-width: 1080px) {
+  .parallax {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
+  .parallax > * {
+    height: 100%;
+    position: relative;
+    top: 0%;
+  }
+}*/
+
+.panel.green {
+  margin-bottom: 100px
+}
+
+.panel.plane {
+  margin-bottom: 200px
+}
+
+.hero {
+  background-size: cover;
+  background-position: center center;
+}
+
+.map {
+  background-image: url(../img/map.png);
+}
+
+.hero-one {
+  background: url(../img/IMG_1266.JPG);
+}
+
+.hero-two {
+  background-image: url(../img/IMG_5103.JPG);
+}
+
+.hero-gif {
+  background-image: url(../img/IMG_4746-ANIMATION.gif);
+  background-position: center 5%;
+}
+
+.hero-three {
+  background-image: url(../img/IMG_7812.JPG);
+}
+
+.hero-four {
+  background-image: url(../img/IMG_9552_2.JPG);
+}
+
+.hero-five {
+  background-image: url(../img/IMG_7878.JPG);
+}
+
+.hero-six {
+  background-image: url(../img/IMG_1135.JPG);
+}
+
+.grey {
+  background-color: #d7d2cb;
+}
+
+.green {
+  background-color: #cbd7d2;
+}
+
+.copy {
+  position: absolute;
+  top: 35%;
+  height: 10em;
+  margin-top: -5em;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+}
+
+.svg .copy,
+#wishlist .copy,
+#return .copy {
+  top: 50%;
+}
+
+.copy h1 {
+  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.copy ul {
+  list-style-type: none;
+  display: inline-block;
+  width: 50%;
+  margin: auto;
+}
+
+.copy p {
+  width: 50%;
+  margin: auto;
+}
+
+.sticky {
+  z-index: 30;
+  bottom: 0px;
+  right: 0px;
+}
+
+#party img {
+  position: absolute;
+  left: -100px;
+}

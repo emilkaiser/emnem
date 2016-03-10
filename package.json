@@ -1,0 +1,13 @@
+{
+  "name": "emnem",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "*",
+    "scrollmagic": "*",
+    "text-to-svg": "*",
+    "normalize.css": "*",
+    "gsap": "*",
+    "uglify-js": "*",
+    "uglifycss": "*"
+  }
+}
