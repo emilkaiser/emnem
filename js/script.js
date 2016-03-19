@@ -8,15 +8,15 @@ $(function () {
 
   panels();
   svg();
-  text("#dresscode");
-  text("#map");
-  textLeft("#about");
-  textLeft("#ee");
-  text("#hashtag");
-  textLeft("#osa");
-  zoom('#return');
-  zoom('#wishlist');
-  leaf("#party");
+  text("dresscode");
+  text("map");
+  textLeft("about");
+  textLeft("ee");
+  text("hashtag");
+  textLeft("osa");
+  zoom('return');
+  zoom('wishlist');
+  leaf("party");
   customSwipe(".custom-panels");
   parallax(".parallax-two");
   parallax(".parallax-three");
@@ -24,7 +24,9 @@ $(function () {
   parallax(".parallax-five");
   parallax(".parallax-six");
   parallax(".parallax-seven");
-  scrollTo();
+  //if (!mobileAndTabletcheck) {
+    scrollTo();
+  //}
 
   function sticky (element) {
     var scene = new ScrollMagic.Scene({triggerElement: element})
@@ -55,28 +57,28 @@ $(function () {
   }
 
   function text (selector) {
-    $(selector).css("overflow", "hidden");
-    var scene = new ScrollMagic.Scene({triggerElement: selector, duration: 300})
-      .setTween(TweenMax.staggerFromTo(selector + " .copy", 2, {left: 910}, {left: 0, ease: Back.easeOut}, 0.15))
-      .setClassToggle('a[href="' + selector + '"]', "active")
+    $('section.' + selector).css("overflow", "hidden");
+    var scene = new ScrollMagic.Scene({triggerElement: 'section.' + selector + ' + section', duration: 300})
+      .setTween(TweenMax.staggerFromTo('section.' + selector + " + section .copy", 2, {left: 910}, {left: 0, ease: Back.easeOut}, 0.15))
+      .setClassToggle('a[href="#' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.5);
   }
 
   function textLeft (selector) {
-    $(selector).css("overflow", "hidden");
-    var scene = new ScrollMagic.Scene({triggerElement: selector, duration: 300})
-      .setTween(TweenMax.staggerFromTo(selector + " .copy", 2, {right: 1110}, {right: 0, ease: Back.easeOut}, 0.15))
-      .setClassToggle('a[href="' + selector + '"]', "active")
+    $('section.' + selector).css("overflow", "hidden");
+    var scene = new ScrollMagic.Scene({triggerElement: 'section.' + selector, duration: 300})
+      .setTween(TweenMax.staggerFromTo('section.' + selector + " .copy", 2, {right: 1110}, {right: 0, ease: Back.easeOut}, 0.15))
+      .setClassToggle('a[href="#' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.1);
   }
 
   function zoom (selector) {
-    $(selector).css("overflow", "hidden");
-    var scene = new ScrollMagic.Scene({triggerElement: selector})
-      .setTween(selector + " .copy", 0.5, {scale: 1.25})
-      .setClassToggle('a[href="' + selector + '"]', "active")
+    $('section.' + selector).css("overflow", "hidden");
+    var scene = new ScrollMagic.Scene({triggerElement: 'section.' + selector})
+      .setTween('section.' + selector + " .copy", 0.5, {scale: 1.25})
+      .setClassToggle('a[href="#' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.2);
   }
@@ -116,13 +118,13 @@ $(function () {
     };
 
     var tween = new TimelineMax()
-      .add(TweenMax.to($(selector + " img"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
-      .add(TweenMax.to($(selector + " img"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
-      .add(TweenMax.to($(selector + " img"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
+      .add(TweenMax.to($('section.' + selector + " img"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+      .add(TweenMax.to($('section.' + selector + " img"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+      .add(TweenMax.to($('section.' + selector + " img"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
-    var scene = new ScrollMagic.Scene({triggerElement: selector, duration: 500, offset: 10})
-      .setClassToggle('a[href="' +  selector + '"]', "active")
-      .setPin(selector + ".copy")
+    var scene = new ScrollMagic.Scene({triggerElement: 'section.' + selector, duration: 500, offset: 10})
+      .setClassToggle('a[href="#' +  selector + '"]', "active")
+      .setPin('section.' + selector + ".copy")
       .setTween(tween)
       .addTo(controller)
       .triggerHook(0.2);
@@ -130,7 +132,7 @@ $(function () {
 
   function customSwipe (triggerElement) {
     var tween = new TimelineMax()
-      .fromTo("section.custom-panel.map", 1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})
+      .fromTo("section.custom-panel.map-img", 1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})
       .fromTo("section.custom-panel.grey", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
 
     var scene = new ScrollMagic.Scene({triggerElement: triggerElement, triggerHook: "onLeave", duration: "300%"})
@@ -148,10 +150,6 @@ $(function () {
   }
 
   function scrollTo () {
-
-    if (mobileAndTabletcheck) {
-      return;
-    }
 
     controller.scrollTo(function (newpos) {
       TweenMax.to(window, 0.5, {scrollTo: {y: newpos, x: 0}});

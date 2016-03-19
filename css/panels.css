@@ -49,7 +49,7 @@ a:hover  {
   background-position: center center;
 }
 
-.map {
+.map-img {
   background-size: cover;
   background-image: url(../img/map.png);
 }
@@ -132,7 +132,7 @@ a:hover  {
   right: 0px;
 }
 
-#party img {
+#party + div img {
   position: absolute;
   left: -100px;
 }
