@@ -12,6 +12,8 @@ $(function () {
   text("#map");
   textLeft("#about");
   textLeft("#ee");
+  text("#hashtag");
+  textLeft("#osa");
   zoom('#return');
   zoom('#wishlist');
   leaf("#party");
@@ -21,6 +23,7 @@ $(function () {
   parallax(".parallax-four");
   parallax(".parallax-five");
   parallax(".parallax-six");
+  parallax(".parallax-seven");
   scrollTo();
 
   function sticky (element) {
@@ -63,7 +66,7 @@ $(function () {
   function textLeft (selector) {
     $(selector).css("overflow", "hidden");
     var scene = new ScrollMagic.Scene({triggerElement: selector, duration: 300})
-      .setTween(TweenMax.staggerFromTo(selector + " .copy", 2, {right: 910}, {right: 0, ease: Back.easeOut}, 0.15))
+      .setTween(TweenMax.staggerFromTo(selector + " .copy", 2, {right: 1110}, {right: 0, ease: Back.easeOut}, 0.15))
       .setClassToggle('a[href="' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.1);
@@ -72,7 +75,7 @@ $(function () {
   function zoom (selector) {
     $(selector).css("overflow", "hidden");
     var scene = new ScrollMagic.Scene({triggerElement: selector})
-      .setTween(selector + " .copy", 0.5, {scale: 2})
+      .setTween(selector + " .copy", 0.5, {scale: 1.25})
       .setClassToggle('a[href="' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.2);

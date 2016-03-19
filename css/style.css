@@ -10,21 +10,12 @@ body {
 body, html {
 	height: 100%
 }
-
-h1, h2, h3, h4 {
-	font-family: "Josefin Slab", serif;
-}
-h1 {
-	font-style: italic;
-	font-weight: bold;
-	font-size: 40px;
-}
-h2 {
-	font-size: 20px;
+a {
+	text-decoration: underline;
+	color: #fff;
 }
 a, a:visited {
-	text-decoration: none;
-	color: #2e639e;
+	text-decoration: underline;
 }
 a:hover {
 	text-decoration: underline;
