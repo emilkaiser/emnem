@@ -11,7 +11,8 @@ a:hover  {
 
 .panel,
 .custom-panels,
-.custom-panel {
+.custom-panel,
+.panel > * {
   height: 100%;
   width: 100%;
   text-align: center;
@@ -36,12 +37,12 @@ a:hover  {
   top: -100%;
 }
 
-.panel.green {
-  margin-bottom: 100px
-}
-
-.panel.plane {
-  margin-bottom: 200px
+.panel.about,
+.panel.party,
+.panel.plane,
+.panel.wishlist,
+.panel.ee {
+  margin-bottom: 300px
 }
 
 .hero {
@@ -50,6 +51,7 @@ a:hover  {
 }
 
 .map-img {
+  background-position: center center;
   background-size: cover;
   background-image: url(../img/map.png);
 }
@@ -84,6 +86,11 @@ a:hover  {
   background-image: url(../img/IMG_1135.jpg);
 }
 
+.hero-seven {
+  background-image: url(../img/IMG_2567.JPG);
+  background-position: 60% center;
+}
+
 .grey {
   background-color: #d7d2cb;
 }
@@ -94,7 +101,7 @@ a:hover  {
 
 .copy {
   position: absolute;
-  top: 35%;
+  top: 40%;
   height: 10em;
   margin-top: -5em;
   width: 100%;
@@ -103,9 +110,13 @@ a:hover  {
 }
 
 .svg .copy,
-#wishlist .copy,
-#return .copy {
+.wishlist .copy,
+.return .copy {
   top: 50%;
+}
+
+svg {
+  padding-right: 40px;
 }
 
 .copy h1 {
@@ -142,6 +153,11 @@ a:hover  {
   font-size: 4em;
 }
 
+body:before {
+  content: "big";
+  display: none; /* Prevent from displaying. */
+}
+
 @media only screen and (max-width: 1080px) {
   .copy h1 {
     font-size: 1.5em;
@@ -158,5 +174,9 @@ a:hover  {
   #hashtag h1 {
     color: #D6B6BF;
     font-size: 2em;
+  }
+
+  body:before {
+    content: "small";
   }
 }
