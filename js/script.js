@@ -72,7 +72,7 @@ $(function () {
   }
 
   function stagger () {
-    var tween = TweenMax.staggerFromTo(".animate", 2, {left: 700}, {left: 0, ease: Back.easeOut}, 0.15);
+    var tween = TweenMax.staggerFromTo(".animate", 2, {left: 1100}, {left: 0, ease: Back.easeOut}, 0.15);
     new ScrollMagic.Scene({triggerElement: "section.ee", duration: 300})
       .setTween(tween)
       .addTo(controller);

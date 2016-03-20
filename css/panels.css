@@ -226,18 +226,21 @@ section.ee {
 }
 
 .box {
-    width: 100px;
-    height: 100px;
-    margin: 25px auto 25px auto;
-    left: 700px;
+  width: 100px;
+  height: 100px;
+  margin: auto auto 20px auto;
+  left: 700px;
 }
 
 .box {
-    display: inline-block;
-    position: relative;
-    border-radius: 8px;
-    border: 0px solid white;
-    text-align: center;
-    vertical-align: middle;
-    padding: 0 5px;
+  display: inline-block;
+  position: relative;
+  border-radius: 2px;
+  border: 0px solid white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.boxes {
+  margin-top: 80px;
 }
