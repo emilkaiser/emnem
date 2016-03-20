@@ -29,6 +29,7 @@ $(function () {
   }
   panels();
   menu();
+  stagger();
 
   function panels () {
     var slides = $("section.panel");
@@ -68,6 +69,13 @@ $(function () {
       .setClassToggle('a[href="#' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.1);
+  }
+
+  function stagger () {
+    var tween = TweenMax.staggerFromTo(".animate", 2, {left: 700}, {left: 0, ease: Back.easeOut}, 0.15);
+    new ScrollMagic.Scene({triggerElement: "section.ee", duration: 300})
+      .setTween(tween)
+      .addTo(controller);
   }
 
   function zoom (selector) {

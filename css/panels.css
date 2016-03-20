@@ -57,38 +57,74 @@ a:hover  {
 }
 
 .hero-one {
-  background: url(../img/IMG_1266.JPG);
+  background: url(../img/hero1.JPG);
 }
 
 .hero-two {
-  background-image: url(../img/IMG_5103.JPG);
+  background-image: url(../img/hero2.JPG);
 }
 
 .hero-gif {
-  background-image: url(../img/IMG_4746-ANIMATION.gif);
+  background-image: url(../img/animation.gif);
   background-position: center 5%;
 }
 
 .hero-three {
-  background-image: url(../img/IMG_7812.JPG);
+  background-image: url(../img/hero3.JPG);
 }
 
 .hero-four {
-  background-image: url(../img/IMG_9552_2.JPG);
+  background-image: url(../img/hero4.JPG);
 }
 
 .hero-five {
-  background-image: url(../img/IMG_7878.JPG);
+  background-image: url(../img/hero5.JPG);
   background-position: 5% center;
 }
 
 .hero-six {
-  background-image: url(../img/IMG_1135.jpg);
+  background-image: url(../img/hero6.jpg);
 }
 
 .hero-seven {
-  background-image: url(../img/IMG_2567.JPG);
+  background-image: url(../img/hero7.JPG);
   background-position: 60% center;
+}
+
+.box {
+  background-size: cover;
+}
+
+.box-one {
+  background-image: url(../img/box1.png);
+}
+
+.box-two {
+  background-image: url(../img/box2.png);
+}
+
+.box-three {
+  background-image: url(../img/box3.png);
+}
+
+.box-four {
+  background-image: url(../img/box4.png);
+}
+
+.box-five {
+  background-image: url(../img/box5.png);
+}
+
+.box-six {
+  background-image: url(../img/box6.png);
+}
+
+.box-seven {
+  background-image: url(../img/box7.png);
+}
+
+.box-eight {
+  background-image: url(../img/box8.png);
 }
 
 .grey {
@@ -113,6 +149,10 @@ a:hover  {
 .wishlist .copy,
 .return .copy {
   top: 50%;
+}
+
+.ee .copy {
+  top: 55%;
 }
 
 svg {
@@ -179,4 +219,25 @@ body:before {
   body:before {
     content: "small";
   }
+}
+
+section.ee {
+  overflow: hidden;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 25px auto 25px auto;
+    left: 700px;
+}
+
+.box {
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    border: 0px solid white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 5px;
 }
