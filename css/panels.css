@@ -45,11 +45,6 @@ a:hover  {
   margin-bottom: 300px
 }
 
-.hero {
-  background-size: cover;
-  background-position: center center;
-}
-
 .map-img {
   background-position: center center;
   background-size: cover;
@@ -89,6 +84,11 @@ a:hover  {
 .hero-seven {
   background-image: url(../img/hero7.JPG);
   background-position: 60% center;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center center;
 }
 
 .box {
@@ -243,4 +243,68 @@ section.ee {
 
 .boxes {
   margin-top: 80px;
+}
+
+.news,
+.news a {
+ color: #DC9999;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .copy {
+    margin-top: 0;
+  }
+  .copy h1 {
+    font-size: 0.7em;
+  }
+  .copy p {
+    width: 40%;
+    font-size: 0.3em;
+  }
+  .copy ul {
+    width: 40%;
+    font-size: 0.3em;
+  }
+
+  #hashtag h1 {
+    color: #D6B6BF;
+    font-size: 2em;
+  }
+
+  body:before {
+    content: "small";
+  }
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+  .copy {
+    margin-top: 0;
+  }
+
+  .copy h1 {
+    font-size: 0.7em;
+  }
+  .copy p {
+    width: 40%;
+    font-size: 0.3em;
+  }
+  .copy ul {
+    width: 40%;
+    font-size: 0.3em;
+  }
+
+  #hashtag h1 {
+    color: #D6B6BF;
+    font-size: 2em;
+  }
+
+  body:before {
+    content: "small";
+  }
 }

@@ -56,7 +56,7 @@ $(function () {
   function text (selector) {
     $('section.' + selector).css("overflow", "hidden");
     new ScrollMagic.Scene({triggerElement: 'section.' + selector, duration: 300})
-      .setTween(TweenMax.staggerFromTo('section.' + selector + " .copy", 2, {left: 910}, {left: 0, ease: Back.easeOut}, 0.15))
+      .setTween(TweenMax.staggerFromTo('section.' + selector + " .copy", 2, {left: 1510}, {left: 0, ease: Back.easeOut}, 0.15))
       .setClassToggle('a[href="#' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.5);
@@ -65,7 +65,7 @@ $(function () {
   function textLeft (selector) {
     $('section.' + selector).css("overflow", "hidden");
     new ScrollMagic.Scene({triggerElement: 'section.' + selector, duration: 300})
-      .setTween(TweenMax.staggerFromTo('section.' + selector + " .copy", 2, {right: 1110}, {right: 0, ease: Back.easeOut}, 0.15))
+      .setTween(TweenMax.staggerFromTo('section.' + selector + " .copy", 2, {right: 1510}, {right: 0, ease: Back.easeOut}, 0.15))
       .setClassToggle('a[href="#' + selector + '"]', "active")
       .addTo(controller)
       .triggerHook(0.1);
