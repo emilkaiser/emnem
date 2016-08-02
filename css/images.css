@@ -1,0 +1,35 @@
+  body {
+    background-color: #cbd7d2;
+  }
+  .container {
+    max-width: 90em;
+    padding: 1em;
+    margin: 0 auto;
+  }
+  img {
+    max-width: 100%;
+  }
+  svg {
+    display: table;
+    margin: 0 auto;
+  }
+  .grid {
+    display: flex;
+    margin-bottom: 1em;
+  }
+  .grid:last-child {
+    margin-bottom: 0;
+  }
+  .grid .col {
+    padding-right: 1em;
+  }
+  .grid .col:last-child {
+    padding-right: 0;
+  }
+  .col {
+    flex: 1;
+  }
+  hr {
+    border: 1px solid #dc9999;
+    margin: 4em 0 4em 0;
+  }
