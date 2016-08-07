@@ -8,6 +8,8 @@
     "normalize.css": "*",
     "gsap": "*",
     "uglify-js": "*",
-    "uglifycss": "*"
+    "uglifycss": "*",
+    "waypoints": "*",
+    "jquery-lazyload": "*"
   }
 }
